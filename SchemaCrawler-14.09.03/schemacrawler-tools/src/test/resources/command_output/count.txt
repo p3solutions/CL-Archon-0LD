@@ -1,0 +1,17 @@
+
+
+Row Count
+========================================================================
+
+Row Count                                                               
+------------------------------------------------------------------------
+PUBLIC.BOOKS.AUTHORS                                             20 rows
+PUBLIC.BOOKS.AUTHORSLIST                                         20 rows
+PUBLIC.BOOKS.BOOKAUTHORS                                         20 rows
+PUBLIC.BOOKS.BOOKS                                               20 rows
+PUBLIC.BOOKS."Global Counts"                                       empty
+PUBLIC.BOOKS.PUBLISHERS                                          20 rows
+PUBLIC."PUBLISHER SALES".REGIONS                                 20 rows
+PUBLIC."PUBLISHER SALES".SALES                                   20 rows
+PUBLIC."PUBLISHER SALES".SALESDATA                                 empty
+

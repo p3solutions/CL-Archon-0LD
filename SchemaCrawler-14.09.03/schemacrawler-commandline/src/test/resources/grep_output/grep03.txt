@@ -1,0 +1,68 @@
+
+
+Tables
+========================================================================
+
+
+
+PUBLIC.BOOKS.AUTHORS                                             [table]
+------------------------------------------------------------------------
+Contact details for book authors
+  ID                                INTEGER NOT NULL            
+  FIRSTNAME                         VARCHAR(20) NOT NULL        
+  LASTNAME                          VARCHAR(20) NOT NULL        
+  ADDRESS1                          VARCHAR(255)                
+  ADDRESS2                          VARCHAR(255)                
+  CITY                              VARCHAR(50)                 
+  STATE                             VARCHAR(2)                  
+  POSTALCODE                        VARCHAR(10)                 
+  COUNTRY                           VARCHAR(50)                 
+
+Primary Key
+
+PK_AUTHORS                                                 [primary key]
+  ID                                ascending                   
+
+Foreign Keys
+
+FK_Z_AUTHOR                                [foreign key, with no action]
+  ID <--(0..many) PUBLIC.BOOKS.BOOKAUTHORS.AUTHORID                              
+
+Indexes
+
+SYS_IDX_PK_AUTHORS_10097                                  [unique index]
+  ID                                ascending                   
+
+IDX_B_AUTHORS                                         [non-unique index]
+  LASTNAME                          ascending                   
+  FIRSTNAME                         ascending                   
+
+IDX_A_AUTHORS                                         [non-unique index]
+  CITY                              ascending                   
+  STATE                             ascending                   
+  POSTALCODE                        ascending                   
+  COUNTRY                           ascending                   
+
+Triggers
+
+TRG_AUTHORS                             [trigger, after delete, per row]
+UPDATE BOOKS.PUBLISHERS SET PUBLISHER='Jacob'WHERE PUBLISHER='John'
+
+Table Constraints
+
+CHECK_UPPERCASE_STATE                                 [check constraint]
+  STATE                                                         
+BOOKS.AUTHORS.STATE=UPPER(BOOKS.AUTHORS.STATE)
+
+SYS_CT_10094                                          [check constraint]
+  ID                                                            
+BOOKS.AUTHORS.ID IS NOT NULL
+
+SYS_CT_10095                                          [check constraint]
+  FIRSTNAME                                                     
+BOOKS.AUTHORS.FIRSTNAME IS NOT NULL
+
+SYS_CT_10096                                          [check constraint]
+  LASTNAME                                                      
+BOOKS.AUTHORS.LASTNAME IS NOT NULL
+

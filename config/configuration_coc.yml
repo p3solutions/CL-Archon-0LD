@@ -1,0 +1,28 @@
+#IA Chain of Custody Validator MODULE
+
+#path to one or more metadata file seperate by semicolon
+metadataFilePath: 
+
+#Infoarchive User Name
+infoarchiveUserName: 
+
+#Infoarchive Password 
+infoarchivePassword: 
+
+#Follow the user guide for encryption of password 
+isPasswordEncrypted: true
+
+#Infoarchive home directory
+infoarchivePath: 
+
+#Infoarchive application name
+infoarchiveApplicationName: 
+
+#Infoarchive database name
+infoarchiveDatabaseName: 
+
+#report generation path
+outputPath: ../CL-Archon_output
+
+#If the logger property is set to console(the log will get printed in the console), if set to file (the log will get generated in the output path)
+logger : file   #possible values are console,file

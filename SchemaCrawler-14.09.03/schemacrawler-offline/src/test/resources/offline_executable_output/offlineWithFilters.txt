@@ -1,0 +1,54 @@
+
+
+Tables
+========================================================================
+
+
+
+PUBLIC."PUBLISHER SALES".SALES                                   [table]
+------------------------------------------------------------------------
+  POSTALCODE                        VARCHAR(10) NOT NULL        
+  COUNTRY                           VARCHAR(50) NOT NULL        
+  BOOKID                            INTEGER                     
+  PERIODENDDATE                     DATE                        
+  TOTALAMOUNT                       DOUBLE(64, 0)               
+  SALESDATAID                       INTEGER                     
+
+Foreign Keys
+
+FK_SALES_SALESDATA                         [foreign key, with no action]
+  SALESDATAID (0..many)--> PUBLIC."PUBLISHER SALES".SALESDATA.SALESDATAID                              
+
+FK_SALES_REGIONS                           [foreign key, with no action]
+  POSTALCODE (0..many)--> PUBLIC."PUBLISHER SALES".REGIONS.POSTALCODE                              
+  COUNTRY (0..many)--> PUBLIC."PUBLISHER SALES".REGIONS.COUNTRY                              
+
+Indexes
+
+SYS_IDX_10158                                         [non-unique index]
+  SALESDATAID                       ascending                   
+
+SYS_IDX_10156                                         [non-unique index]
+  POSTALCODE                        ascending                   
+  COUNTRY                           ascending                   
+
+Privileges and Grants
+
+DELETE                                                       [privilege]
+  _SYSTEM --> DBA (grantable)                                   
+
+INSERT                                                       [privilege]
+  _SYSTEM --> DBA (grantable)                                   
+
+REFERENCES                                                   [privilege]
+  _SYSTEM --> DBA (grantable)                                   
+
+SELECT                                                       [privilege]
+  _SYSTEM --> DBA (grantable)                                   
+
+TRIGGER                                                      [privilege]
+  _SYSTEM --> DBA (grantable)                                   
+
+UPDATE                                                       [privilege]
+  _SYSTEM --> DBA (grantable)                                   
+

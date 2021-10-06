@@ -1,0 +1,92 @@
+#RDBMS MODULE
+
+#Database Configuration
+
+#Available Server Options => SQL,SQLWINAUTH,ORACLE,ORACLESERVICE,MySQL,MariaDB,DB2,PostgreSQL,Sybase,Teradata
+databaseServer: SQL       
+hostName: localhost
+portNumber: 1433
+userName:  sa
+password: secret
+#Follow the user guide for encryption of password 
+isPasswordEncrypted: false
+databaseName:  R17MB
+#Multiple schemas should be specified as (schema1|schema2)
+schemaName: dbo
+
+
+#Table Inclusion Rule(For Specific Table/View). please verify the document for more information
+tableInclusionRule:    # e.g: (tablename1|tablename2)
+
+#To include the Table/View for the extraction
+includeTable: true              #TABLE
+includeView: false             #VIEW
+
+#Available modes => metadata,dataExtract,query,count,graph
+#dump - This mode represent the data extraction
+command: dataExtract
+
+#Available o/p formats for provided modes
+#For metadata,count => xml,csv,tsv,txt,html,json
+#For dump,query     => xml,csv,tsv,txt,html,json,sip
+#For graph          => pdf,png,jpeg
+outputFormat: sip
+
+#specify the dot file(it will be present inside bin folder) path for generating the graph
+graphvizDotPath: 
+
+#Based on the need, user can enable the below properties for generating metadata 
+
+#For including RelationShip in the metadata generation
+includeRelationship: false
+#For including record count in the metadata generation
+includeRecordCount: true
+#To include index variable in the metadata generation
+getIndexFromSourceDB: false
+
+
+
+#Based on the need, user can enable the below properties for extracting the data 
+ 
+#Splits date from Date time Type for InfoArchive Compatibility
+generateXMLCompatibleDateTimeFields: false
+#This property will extract the blob/clob data
+includeLobContent: false
+#Based on the need, user can edit the below blob reference tag for extracting the blob data
+blobReferenceAttribute: ref
+#This property will consider date field as datetime field while extracting the data
+extractDateWithTimeFormat: false
+#This below property will help the XML file to split into multiple chunks 
+outputFileSplitSize: 100
+#Maximum Parallel thread for running the extraction process
+maximumParallelProcess: 3
+#If the output format is set to "sip", user needs to provide the below properties
+applicationName: d
+holdingPrefix: d
+
+#If the mode is selected as "query", user needs to provide the below properties
+#For each query the user need to provide a query title
+#Example:
+#QueryTitle: "[Schema].[ADDRESS];[Schema].[ACTOR];"
+#Query : select * from Schema.ADDRESS;select * from Schema.ACTOR;
+#if user needs to pass a query through a file,then they need to enable the queryfile to true and give the query path in the property.
+#Example:
+#queryFile : true
+#query : C:\query.txt
+
+
+
+queryTitle: "[dbo].[CLAIMS_SYS];"
+
+queryType: queryText                # Options include: ( queryText, queryFile )
+queryText: select * from dbo.CLAIM_LINES;               # Example: select * from DBO.PERSON; select * from DBO.ADDRESS;
+queryFile:                 # Example: C:\sqlFile.sq
+
+
+#Below property shows where the output path needed to be extracted
+outputPath: E:\Product\LW-Archon\CL-Archon_output
+dynamicOutputPath: true  #If the property is set to true the Archon will dynamically generate the output path with a random job id, if set to false the generated files will always generate in the given path.
+
+jobName: 
+#If the logger property is set to console(the log will get printed in the console), if set to file (the log will get generated in the output path)
+logger : console   #possible values are console,file

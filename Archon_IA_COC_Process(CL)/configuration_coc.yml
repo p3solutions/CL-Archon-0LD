@@ -1,0 +1,23 @@
+#COC MODULE
+
+#path to one or more metadata file seperate by semicolon
+metadataFiles: r
+
+#Infoarchive User Name
+user: r
+
+#Infoarchive Password 
+pass: r
+
+#Infoarchive home directory
+iaPath: 
+
+#Infoarchive application name
+appName: r
+
+#Infoarchive database name
+dbName: 
+
+#report generation path
+outputPath: E:\op
+

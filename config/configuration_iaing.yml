@@ -1,0 +1,52 @@
+#IA DATA INGESTER MODULE
+
+#Infoarchive Application Name
+infoarchiveApplicationName: 
+
+#Infoarchive User Name
+infoarchiveUserName: 
+
+#Infoarchive Password 
+infoarchivePassword: 
+
+#Follow the user guide for encryption of password 
+isPasswordEncrypted: true
+
+#Infoarchive database name (provide this input if the archive type is "TABLE" application)
+infoarchiveDatabaseName: 
+
+#Infoarchive schema name (provide this input if the archive type is "TABLE" application)
+infoarchiveSchemaName: 
+
+#Infoarchive home directory
+infoarchivePath: 
+
+#Extracted data directory
+dataPath: 
+
+#report generation path
+outputPath: ../CL-Archon_output
+
+#In default the application type will be table, if user opts for sip ingestion they need to enable this property to true
+isSipApplication: false 
+
+#Metadata Ingestion for table application (In default the application type will be data ingestion, if user opts for metadata ingestion they need to enable this property to true)
+isMetadataIngestion: false
+
+#info archive version
+#To specify the InfoArchive version use the below variable
+# iaVersion 16EP3: 16EP3
+# iaVersion 16EP4: 16EP4
+# iaVersion 16EP5: 16EP5 
+# iaVersion 16EP5.1: 16EP6
+# iaVersion 16EP7: 16EP7
+# iaVersion 20.2 : 20.2
+# iaVersion 20.4 : 20.4
+# iaVersion 21.2 : 21.2
+
+infoarchiveVersion: 16EP6
+
+addExtentionAfterSuccessfulIngestion: false 
+
+#If the logger property is set to console(the log will get printed in the console), if set to file (the log will get generated in the output path)
+logger : file   #possible values are console,file

@@ -1,0 +1,122 @@
+
+
+Tables
+========================================================================
+
+
+
+BOOKS                                                            [table]
+------------------------------------------------------------------------
+Details for published books
+  ID                                INTEGER NOT NULL            
+                                    Unique (internal) id for book
+  PREVIOUSEDITIONID                 INTEGER                     
+
+Primary Key
+
+PK_BOOKS                                                   [primary key]
+  ID                                ascending                   
+
+Foreign Keys
+
+FK_Y_BOOK                                  [foreign key, with no action]
+  ID <-- BOOKAUTHORS.BOOKID                                     
+
+FK_PREVIOUSEDITION                         [foreign key, with no action]
+  ID <--(0..1) PREVIOUSEDITIONID                                
+
+
+
+"Global Counts"                                                  [table]
+------------------------------------------------------------------------
+
+
+
+PUBLISHERS                                                       [table]
+------------------------------------------------------------------------
+List of book publishers
+  ID                                INTEGER NOT NULL            
+                                    auto-incremented            
+                                    Unique (internal) id for book publisher
+
+Primary Key
+
+SYS_PK_10092                                               [primary key]
+  ID                                ascending                   
+                                    auto-incremented            
+
+
+
+Routines
+========================================================================
+
+
+
+NEW_PUBLISHER                                     [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+NEW_PUBLISHER                                     [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+CONVERT_BLOCK                                     [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+DELETE_BLOCKS                                     [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+DELETE_LOB                                        [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+DELETE_UNUSED                                     [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+DELETE_UNUSED_LOBS                                [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+DIVIDE_BLOCK                                      [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+MERGE_EMPTY_BLOCKS                                [procedure, no result]
+------------------------------------------------------------------------
+
+
+
+Sequences
+========================================================================
+
+
+
+PUBLISHER_ID_SEQ                                              [sequence]
+------------------------------------------------------------------------
+
+
+
+LOB_ID                                                        [sequence]
+------------------------------------------------------------------------
+
+
+
+Synonyms
+========================================================================
+
+
+
+PUBLICATIONS                                                   [synonym]
+------------------------------------------------------------------------
+

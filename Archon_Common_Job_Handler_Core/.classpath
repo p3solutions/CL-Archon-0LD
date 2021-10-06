@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commonutilities"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HibernateLibs"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jdbcDrivers"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Archon_Common_Core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Archon_Database_Models"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/siphelper"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

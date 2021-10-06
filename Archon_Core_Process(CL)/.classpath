@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_272">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jdbcDrivers"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/schemacrawler"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/schemaCrawlerJdbcJars"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commonutilities"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Archon_Database_Models"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Archon_ExtractionConstants"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Archon_Common_Core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Archon_Common_Job_Handler_Core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/excelcsv"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HibernateLibs"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/siphelper"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SchemaCrawler - 1 - API"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SchemaCrawler - 2 - Tools"/>
+	<classpathentry kind="lib" path="E:/Product/Archon_Latest/lib/ojdbcDrivers/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Archon/Archon/lib/siphelper/infoarchive-sdk-core-7.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Archon/Archon/lib/siphelper/infoarchive-sdk-stringtemplate-7.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Archon/Archon/lib/siphelper/infoarchive-sdk-velocity-7.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Archon/Archon/lib/siphelper/infoarchive-sip-sdk-core-5.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Archon/Archon/lib/siphelper/infoarchive-sip-sdk-stringtemplate-5.7.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
